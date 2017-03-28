@@ -6,5 +6,6 @@ from . import views
 app_name = "embriologia"
 
 urlpatterns = [	
-    url(r'^$', views.index, name='index'),
+    url(r'^lista$', views.lista, name='lista'),
+    url(r'^$', views.index, name='index'), 
 ]

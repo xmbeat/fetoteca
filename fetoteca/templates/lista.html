@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+	<section id="blog" class="container">
+        <div class="blog">
+        	<div class="widget categories">
+                <h3>Cuadritos de filtros</h3>
+                {% for feto in fetos %}
+                	<div class="row">
+                    	<div class="col-sm-12">
+                        	<div class="single_comments">
+                            	<img src="{% static 'images/blog/avatar3.png' %}" alt=""  />
+                            	<p>{{ feto.nombre }}</p>
+                            	<p> {{ feto.descripcion }} </p>
+                            	<div class="entry-meta small muted">
+                                	<span>By <a href="#">Alex</a></span>
+                            	</div>
+                        	</div>
+                    	</div>
+                	</div>                     
+                {% endfor %}
+			</div>
+        </div>
+    </section>
+{% endblock %}
