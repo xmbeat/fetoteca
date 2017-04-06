@@ -1191,3 +1191,19 @@ a.scrollup:hover{
 	background-color:#ddd;
 	color:#1BBD36;
 }
+
+.step-links .current{
+  background-color: #1BBD36;
+  padding: 10px;
+}
+
+.step-links a{
+  padding: 10px;
+  float: relative;
+}
+
+.divisor{
+  background: #1BBD36;
+  float: relative;
+  height: 5px;
+}

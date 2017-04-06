@@ -14,12 +14,29 @@
                             	<p>{{ feto.nombre }}</p>
                             	<p> {{ feto.descripcion }} </p>
                             	<div class="entry-meta small muted">
-                                	<span>By <a href="#">Alex</a></span>
+                                	<span>By <a href="{% url 'embriologia:ver' feto.id %}">Ver más</a></span>
                             	</div>
                         	</div>
                     	</div>
                 	</div>                     
                 {% endfor %}
+                <div class="pagination">
+                    <div class="divisor"></div>
+                    <span class="step-links" ">
+                        {% for page in rango %}
+                            {% if page == fetos.number %}
+                               <span class="current">
+                                    {{ page }}
+                               </span> 
+                            {% else %}
+                                <a href="?page={{page}}">{{page}}</a>
+                            {% endif %}
+                        {% endfor %}
+                       <div>Página {{fetos.number}} de {{fetos.paginator.num_pages}}</div>
+                    </span>
+                </div>
+
+
 			</div>
         </div>
     </section>
