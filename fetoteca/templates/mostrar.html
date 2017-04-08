@@ -1,0 +1,5 @@
+<h1> {{feto.nombre}} </h1>
+<div>{{feto.descripcion}}</div>
+{% for malformacion in feto.malformaciones.all %}
+	<li>{{malformacion.nombre}}</li>
+{% endfor %}

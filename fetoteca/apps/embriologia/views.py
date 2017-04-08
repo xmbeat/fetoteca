@@ -37,3 +37,9 @@ def lista_fetos(request):
 
 def ver(request,id):
     pass
+
+def mostrar(request, fetoId):
+    context = {}
+    context['feto']= Feto.objects.get(id=fetoId)
+    context['malformaciones'] = Malformacion.objects.all()
+    return render(request, 'mostrar.html', context)
