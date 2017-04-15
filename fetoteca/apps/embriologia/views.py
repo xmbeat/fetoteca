@@ -43,3 +43,9 @@ def mostrar(request, fetoId):
     context['feto']= Feto.objects.get(id=fetoId)
     context['malformaciones'] = Malformacion.objects.all()
     return render(request, 'mostrar.html', context)
+
+def mostrarAdmin(request, fetoId):
+    context = {}
+    context['feto']= Feto.objects.get(id=fetoId)
+    context['malformaciones'] = Malformacion.objects.all()
+    return render(request, 'mostrarAdmin.html', context)
